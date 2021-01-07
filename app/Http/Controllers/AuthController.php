@@ -22,6 +22,11 @@ class AuthController extends Controller
                 'message' => 'Unauthorized'
             ]);
         }
+
+        return response()->json([
+            'status' => true,
+            'token' => $token
+        ]);
     }
 
     public function register(Request $request, User $user)
