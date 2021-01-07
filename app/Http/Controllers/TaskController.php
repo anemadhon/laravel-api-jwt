@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use JWTAuth;
 use App\Task;
-use Tymon\JWTAuth\JWTAuth;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
