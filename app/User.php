@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Task;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -46,5 +47,10 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class, 'created_by', 'id');
     }
 }

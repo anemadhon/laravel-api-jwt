@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 }); */
 
+// JWT secret : DvGItTlFDtcBaOZryv6ZhNvzfcrewu84fQgMtHhTCbWqc2EbBw82tZcF1wsxt7xo
+
 Route::post('login', 'AuthController@login');
 Route::post('register', 'AuthController@register');
 
